@@ -1,20 +1,12 @@
-# Base image 
-
-FROM python:3.14-slim
-
-# Workdir 
+FROM python:3.9-slim
 
 WORKDIR /app
 
 COPY . .
 
-# Run the build command 
-
 RUN pip install -r requirements.txt
 
-EXPOSE  80
+EXPOSE 80
 
 CMD ["python","run.py"]
-
-
 
